@@ -4,11 +4,34 @@ html {
   margin: 0;
 }
 
-.container {
+.container { 
+  display: grid;
+  gap: 25px;
+  grid-template: repeat(10, 100px) / 25% 75%;
   text-align: center;
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+}
+
+.header {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.nav {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.sidebar {
+  grid-area: 2 / 1 / 9 / 2;
+}
+
+.article {
+  grid-area: 3 / 2 / 9 / 3;
+}
+
+.footer {
+  grid-area: 9 / 1 / 10 / 3;
 }
 
 .container div {
